@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 
-import { Poster, PosterDocument } from './post.schema';
+import { Poster, PosterDocument } from './schemas/post.schema';
 
 @Injectable()
 export class PostService {
