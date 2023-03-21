@@ -1,23 +1,23 @@
-import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { HydratedDocument } from 'mongoose';
-import { User } from 'src/modules/user/user.schema';
-import { Post } from './Post.schema';
+// import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+// import mongoose, { HydratedDocument } from 'mongoose';
+// import { User } from 'src/modules/user/user.schema';
+// import { Post } from './Post.schema';
 
-export type PostLikeDocument = HydratedDocument<PostLike>;
+// export type PostLikeDocument = HydratedDocument<PostLike>;
 
-@Schema({
-  timestamps: true,
-})
-export class PostLike {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
+// @Schema({
+//   timestamps: true,
+// })
+// export class PostLike {
+//   id: string;
+//   createdAt: string;
+//   updatedAt: string;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  owner: User;
+//   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
+//   owner: User;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Post', required: true })
-  post: Post;
-}
+//   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Post', required: true })
+//   post: Post;
+// }
 
-export const PostLikeSchema = SchemaFactory.createForClass(PostLike);
+// export const PostLikeSchema = SchemaFactory.createForClass(PostLike);

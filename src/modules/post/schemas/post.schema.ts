@@ -1,6 +1,5 @@
-import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-import { PostContentProps } from '../dto/create-post.dto';
 
 export type PostDocument = HydratedDocument<Post>;
 
@@ -12,8 +11,8 @@ export class Post {
   createdAt: string;
   updatedAt: string;
 
-  @Prop({ required: true })
-  content: PostContentProps[];
+  // @Prop({ required: true })
+  // content: PostContentProps[];
 }
 
 export const PostSchema = SchemaFactory.createForClass(Post);
