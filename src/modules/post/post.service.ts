@@ -7,7 +7,6 @@ import { Poster, PosterDocument } from './post.schema';
 @Injectable()
 export class PostService {
   constructor(
-    @InjectModel(Poster.name) private postModel: Model<PosterDocument>, // @InjectModel(PostComment.name) // private postCommentModel: Model<PostCommentDocument>,
-  ) // @InjectModel(PostLike.name) private postLikeModel: Model<PostLikeDocument>,
-  {}
+    @InjectModel(Poster.name) private postModel: Model<PosterDocument>, // @InjectModel(PostComment.name) // private postCommentModel: Model<PostCommentDocument>, // @InjectModel(PostLike.name) private postLikeModel: Model<PostLikeDocument>,
+  ) {}
 }
